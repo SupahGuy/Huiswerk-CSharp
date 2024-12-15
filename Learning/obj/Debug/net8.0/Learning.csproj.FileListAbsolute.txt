@@ -26,3 +26,4 @@ C:\Users\DaanS\RiderProjects\Learning\Huiswerk-CSharp\Learning\obj\Debug\net8.0\
 C:\Users\DaanS\RiderProjects\Learning\Huiswerk-CSharp\Learning\obj\Debug\net8.0\Learning.pdb
 C:\Users\DaanS\RiderProjects\Learning\Huiswerk-CSharp\Learning\obj\Debug\net8.0\Learning.genruntimeconfig.cache
 C:\Users\DaanS\RiderProjects\Learning\Huiswerk-CSharp\Learning\obj\Debug\net8.0\ref\Learning.dll
+C:\Users\DaanS\RiderProjects\Learning\Huiswerk-CSharp\Learning\obj\Debug\net8.0\Learning.sourcelink.json
