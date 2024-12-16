@@ -17,7 +17,7 @@ namespace Learning
             // Opdracht9.Run(69); // invoer getal 1-100(natuurlijke getallen) print naar voldoende, onvoldoende enz.. // Short-if variant
             // Opdracht10.Run(); // Quiz met totaal score aan het einde.
             // Opdracht11.Run(); // Hoofdmenu om andere opdrachten te runnen.
-
+            
 
 
 

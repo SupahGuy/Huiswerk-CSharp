@@ -1,35 +1,47 @@
 ﻿namespace Learning;
+using System;
 
 public class Opdracht10
 {
+    private static int totaalScore = 0;
+    private static int vraagNr = 0;
+    private static string[] vraagNrResultaat = new string[5];
+    
     public static void Run()
     {
-        int vraagNr = 1;
-        int totaalScore = 0;
+        // maakt getallen leeg zodat in hoofdmenu het nog steeds werkt.
+        vraagNr = 0;
+        totaalScore = 0;
+        Array.Clear(vraagNrResultaat, 0, vraagNrResultaat.Length);  
+        
         
         Console.WriteLine("Welcome to the Great QUiZZ!");
-
-        totaalScore += maakVraag("Wat is 9+10?", "910", "21", "19", "b", vraagNr);
-        vraagNr++;
         
-        totaalScore += maakVraag("Op welke dag is de eerste kerstdag", "25 December", "23 December", "24 December", "a", vraagNr);
-        vraagNr++;
         
-        totaalScore += maakVraag("Waar was Alexander de Grote Koning van?", "Italië", "Macedonië", "Albanië", "b", vraagNr);
-        vraagNr++;
+        //antwoord hoort 21 te zijn
+        maakVraag("Wat is 9+10?", "910", "21", "19", "b");
         
-        totaalScore += maakVraag("Hoeveel Kilowatt is een KilowattUur", "1000", "3600", "100", "b", vraagNr);
-        vraagNr++;
+        maakVraag("Op welke dag is de eerste kerstdag", "25 December", "23 December", "24 December", "a");
         
-        totaalScore += maakVraag("Hoeveel vragen heeft deze quiz", "4", "1000", "1", "a", vraagNr);
+        maakVraag("Waar was Alexander de Grote Koning van?", "Italië", "Macedonië", "Albanië", "b");
+        
+        maakVraag("Hoeveel Kilowatt is een KilowattUur", "1000", "100", "3600", "c");
+        
+        maakVraag("Hoeveel vragen heeft deze quiz", "5", "1000", "1", "a");
+        
+        
+        //wanneer de quiz "eindigt":
         
         Console.WriteLine("Jouw score is: " + totaalScore);
+        Console.WriteLine(string.Join("\n", vraagNrResultaat));
         Console.WriteLine("Gefelicteerd!");
+        
     }
 
     
-    static int maakVraag(string vraag, string antwoordA, string antwoordB, string antwoordC, string correcteAntwoord, int vraagNr)
+    static void maakVraag(string vraag, string antwoordA, string antwoordB, string antwoordC, string correcteAntwoord)
     {
+        vraagNr++;
         
         Console.WriteLine($"Vraag {vraagNr}: " + vraag);
         
@@ -41,15 +53,21 @@ public class Opdracht10
         //voorkomt dat A en a niet hetzelfde is. 
         correcteAntwoord = correcteAntwoord.ToLower(); 
         
-        //vraagt om antwoord a,b of c.
+        //vraagt om antwoord veranderd A, B of C naar a, b of c.
         string userInput = Console.ReadLine().ToLower();
 
-        //returnt 1 als vraag goed is zodat score omhoog gaat en 0 als het fout is.
-        int returnWaarde = (correcteAntwoord == userInput) ?  1 : 0;
-
-        return returnWaarde;
-
-
+        
+        if (correcteAntwoord == userInput)
+        {
+            System.Console.WriteLine("Jouw antwoord is goed!");
+            totaalScore++;
+            vraagNrResultaat[vraagNr - 1] = ("Vraag " + vraagNr +": Goed"); // voegt Goed toe als antwoord correct is.
+        }
+        else
+        {
+            vraagNrResultaat[vraagNr - 1] = ("Vraag " + vraagNr +": Fout");
+            System.Console.WriteLine("Jouw antwoord is fout!");
+        }
     }
 
 }

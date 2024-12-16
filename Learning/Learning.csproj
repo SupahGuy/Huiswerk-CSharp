@@ -7,4 +7,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Opdracht12\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Opdracht12\NotSoCleanCode\NotSoCleanCode.csproj" />
+      <Content Include="Opdracht12\NotSoCleanCode\NotSoCleanCode.sln" />
+    </ItemGroup>
+
 </Project>
