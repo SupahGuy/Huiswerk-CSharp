@@ -5,7 +5,6 @@ public class Opdracht11
     public static void Run()
     { 
         Hoofdmenu(); // om de eerste keer te laten runnen
-        
     }
 
     public static void Hoofdmenu()
