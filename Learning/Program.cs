@@ -17,14 +17,14 @@ namespace Learning
             //Opdracht9.Run(69); // invoer getal 1-100(natuurlijke getallen) print naar voldoende, onvoldoende enz.. // Short-if variant
             //Opdracht10.Run(); // Quiz met totaal score aan het einde.
             //Opdracht11.Run(); // Hoofdmenu om andere opdrachten te runnen.
-            //Calculator.RunCalculator(); // Run de Calculator app van Opdracht 12 (ik haat deze opdracht)
+            //Calculator.RunCalculator(); // Run de Calculator app van Opdracht 16
             //Opdracht13en14.Run(); //FizzBuzzBang leuke opdracht
             //Opdracht15.Run(); // Fibonacci op verschillende manieren, eerste gebruik van Recursieve Algoritmes en Memoization.
-
-
-
-            // WeekOpdracht2.Opdracht13en14();
-            // WeekOpdracht2.Opdracht15();
+            
+            
+            //Opdracht 17-1
+            Opdracht17_1 o17_1 = new Opdracht17_1();
+            o17_1.Run();
 
         }
 

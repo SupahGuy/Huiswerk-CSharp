@@ -8,12 +8,12 @@ public class Opdracht13en14
         Console.WriteLine("tot hoeveel moet de FizzBuzz Algoritme gaan?");
         int userInputNummer = Convert.ToInt32(Console.ReadLine());
         
-        FizzBuzzBang(userInputNummer);
+        FizzBuzz(userInputNummer);
 
     }
 
 
-    public static void FizzBuzzBang(int userInputNummer)
+    public static void FizzBuzz(int userInputNummer)
     {
         for (int i = 1; userInputNummer >= i; i++)
         {

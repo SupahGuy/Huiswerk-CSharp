@@ -18,7 +18,8 @@ public class Opdracht11
         Console.WriteLine("Toets '0' in om af te sluiten.");
         int inputGebruiker = Convert.ToInt32(Console.ReadLine());
         
-        //Runt opdracht 1 als gebruiker 1 input
+        //Runnet opdracht 1 als gebruiker 1 input
+        
         if (inputGebruiker == 1)
         {
             Console.WriteLine("Deze opdracht heeft een cijfer nodig van 1 t/m 10. (decimalen kan)");
@@ -75,6 +76,7 @@ public class Opdracht11
             Opdracht10.Run();
             terugNaarHoofdmenu();
         }
+        
         //Probeert het programma opnieuw als er een fout is.
         }
         catch (Exception e)

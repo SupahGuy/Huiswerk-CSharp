@@ -9,7 +9,6 @@ public class Opdracht10
     
     public static void Run()
     {
-        // maakt getallen leeg zodat in hoofdmenu het nog steeds werkt.
         vraagNr = 0;
         totaalScore = 0;
         Array.Clear(vraagNrResultaat, 0, vraagNrResultaat.Length);  
