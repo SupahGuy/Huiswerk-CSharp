@@ -2,18 +2,18 @@
 
 public class Opdracht17_1
 {
-    private string[] _testData =
+    private string[] _TestData =
     {
         "Emma Mulder", "Sara De Groot", "Emma Bakker", "Milan Van Dijk", "Emma Smit", "Daan Meijer",
         "Julia Visser", "Noah Mulder", "Daan Wengel", "Sara Van Dijk", "Levi De Groot",
         "Tess Visser", "Sem Smit", "Levi Visser", "Sara De Boer"
     };
 
-    private List<string> _testDataList;
+    private List<string> _TestDataList;
 
     public Opdracht17_1()
     {
-        _testDataList = _testData.ToList();
+        _TestDataList = _TestData.ToList();
     }
 
     public void Run()
@@ -47,7 +47,7 @@ public class Opdracht17_1
     public void PrintContactLijst()
     {
         int indexNaam = 1; // gebruikt om index te weergeven voor gebruiker
-        foreach (string name in _testDataList)
+        foreach (string name in _TestDataList)
         {
             Console.WriteLine(name + " [" + indexNaam + "]");
             indexNaam++;
@@ -57,7 +57,7 @@ public class Opdracht17_1
     //vraagt om optie dan returnet het de gekozen optie in string.
     public string Opties(int indexInput)
     {
-        Console.WriteLine("Contact: " + _testDataList[indexInput]);
+        Console.WriteLine("Contact: " + _TestDataList[indexInput]);
         Console.WriteLine("Toets 1 om te bellen.");
         Console.WriteLine("Toets 2 om dit contact te verwijderen.");
         
@@ -80,7 +80,7 @@ public class Opdracht17_1
     //simuleert bellen met contact op basis van user input.
     public void BelNaam(int indexInput)
     {
-        Console.WriteLine("\nNu aan het bellen met " + _testDataList[indexInput] + "....");
+        Console.WriteLine("\nNu aan het bellen met " + _TestDataList[indexInput] + "....");
     }
 
     //verwijdert contact in lijst op basis van user input.
@@ -88,8 +88,8 @@ public class Opdracht17_1
     {
         //eerst laten zien welke contact verwijderd wordt, dan removen.
         
-        Console.WriteLine("\nContact: " + _testDataList[indexInput] + " Is verwijderd.");
-        _testDataList.RemoveAt(indexInput);
+        Console.WriteLine("\nContact: " + _TestDataList[indexInput] + " Is verwijderd.");
+        _TestDataList.RemoveAt(indexInput);
     }
 
 }

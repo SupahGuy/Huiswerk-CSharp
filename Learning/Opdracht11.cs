@@ -18,7 +18,7 @@ public class Opdracht11
         Console.WriteLine("Toets '0' in om af te sluiten.");
         int inputGebruiker = Convert.ToInt32(Console.ReadLine());
         
-        //Runnet opdracht 1 als gebruiker 1 input
+        //Runt opdracht 1 als gebruiker 1 input
         
         if (inputGebruiker == 1)
         {
