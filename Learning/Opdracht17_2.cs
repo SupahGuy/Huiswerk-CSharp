@@ -2,7 +2,7 @@
 
 public class Opdracht17_2
 {
-    public string[,] _TestData = new string[15, 2]
+    public string[,] _testData = new string[15, 2]
     {
         {"Abstractie", "Het proces van het weglaten van minder essentiële informatie zodat alleen de meest essentiële kenmerken overblijven."},
         {"Algoritme", "Een stapsgewijze procedure voor het uitvoeren van een taak of het berekenen van een waarde."},
@@ -20,11 +20,12 @@ public class Opdracht17_2
         {"Syntax", "De set regels die definiëren hoe instructies in een programmeertaal zijn opgebouwd."},
         {"Variable", "Een opslaglocatie met een geassocieerde naam en een waarde die kan veranderen tijdens de uitvoering van een programma."}
     };
-    
-    private Dictionary<string, string> _TestDataDictionary;
+    //Je hebt 1 key nodig voor 1 value dus 1-1 key-value container moet het zijn, ik dacht toen aan HashSet<T> maar sommige woorden hebben dezelfde definitie, 
+    //dus koos ik voor een Dictionary.
+    private Dictionary<string, string> _testDataDictionary;
     public Opdracht17_2()
     {
-        _TestDataDictionary = new Dictionary<string, string>();
+        _testDataDictionary = new Dictionary<string, string>();
         ConvertToDictionary();
     }
 
@@ -44,20 +45,20 @@ public class Opdracht17_2
     //converteert _TestData into _TestDataDictionary
     public void ConvertToDictionary()
     {
-        for (int i = 0; i < _TestData.GetLength(0); i++)
+        for (int i = 0; i < _testData.GetLength(0); i++)
         {
-            string term = _TestData[i, 0];
-            string uitleg = _TestData[i, 1];
-            _TestDataDictionary.Add(term, uitleg);
+            string term = _testData[i, 0];
+            string uitleg = _testData[i, 1];
+            _testDataDictionary.Add(term, uitleg);
         }
     }
 
     //vergelijkt input met dictionary, als dit overeenkomt print het deze data.
     public void PrintDataFromInput(string userInput)
     {
-        if (_TestDataDictionary.ContainsKey(userInput))
+        if (_testDataDictionary.ContainsKey(userInput))
         { 
-            System.Console.WriteLine(_TestDataDictionary[userInput]);
+            System.Console.WriteLine(_testDataDictionary[userInput]);
          return;   
         }
         System.Console.WriteLine("Geen overeenkomende term");

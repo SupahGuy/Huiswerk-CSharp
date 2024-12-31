@@ -31,10 +31,20 @@ namespace Learning
             // o17_2.Run();
             
             //Opdracht 17_3
-            Opdracht17_3 o17_3 = new Opdracht17_3();
-            o17_3.Run();
+            // Opdracht17_3 o17_3 = new Opdracht17_3();
+            // o17_3.Run();
+            
+            //Opdracht 17_4
+            // Opdracht17_4 o17_4 = new Opdracht17_4();
+            // o17_4.Run();
 
+            //Opdracht 17_5
+            // Opdracht17_5 o17_5 = new Opdracht17_5();
+            // o17_5.Run();
 
+            //Opdracht 17_6
+            Opdracht17_6 o17_6 = new Opdracht17_6();
+            o17_6.Run();
 
 
             // BoterKaasEieren.Run();

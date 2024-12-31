@@ -2,32 +2,37 @@
 
 public class Opdracht17_3
 {
-    private char[] _TestData = 
+    private char[] _testData = 
     {
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
     };
 
-    private List<char> _Text;
-    private List<char> _RedoChars;
-    private ConsoleKeyInfo _Cki;
+    //List van char's omdat het simpel is, en voor deze opdracht prima. het is simpelweg een string maar met meer opties zoals add of removeat, deze opdracht zou zonder 
+    //List gemaakt kunnen worden maar dit is makkelijker en overzichtelijker coderen.
+    private List<char> _text;
+    private List<char> _redoList;
+    private ConsoleKeyInfo _cki; // heeft de mogelijkheid om te Checken of ctrl of shift enz.(modifier) ingedrukt worden tijdens andere key presses.
 
     public Opdracht17_3()
     {
-        _Text = new List<char>();
-        _RedoChars = new List<char>();
+        _text = new List<char>();
+        _redoList = new List<char>();
     }
 
     public void Run()
     {
         while (true)
         {
+            //Dit laat de actuele text display zien.
             PrintText();
-            _Cki = System.Console.ReadKey(); // stopt met de hele tijd dezelfde letter te laten zien als dat ingeput wordt.
-            char userInput = _Cki.KeyChar;
+            
+            //Wacht totdat er een keypress ingeput wordt.
+            _cki = System.Console.ReadKey();
+            char userInput = _cki.KeyChar;
             
             //Verwijdert Text
-            if (_Cki.Key == ConsoleKey.Backspace)
+            if (_cki.Key == ConsoleKey.Backspace)
             {
                 RemoveText();
             }
@@ -37,70 +42,71 @@ public class Opdracht17_3
                 AddText(userInput);
             }
             //Undo Text
-            if ((_Cki.Modifiers & ConsoleModifiers.Control) != 0 && _Cki.Key == ConsoleKey.Z)
+            if ((_cki.Modifiers & ConsoleModifiers.Control) != 0 && _cki.Key == ConsoleKey.Z)
             {
                 Undo();
             }
             //Redo Text
-            if ((_Cki.Modifiers & ConsoleModifiers.Control) != 0 && _Cki.Key == ConsoleKey.Y)
+            if ((_cki.Modifiers & ConsoleModifiers.Control) != 0 && _cki.Key == ConsoleKey.Y)
             {
                 Redo();
             }
-            
         }
     }
 
-    //Checket of de input van user Valid is door _TestData.
+    //Checket of de input van user Valid is door _testData.
     public bool CheckValidInput(char userInput)
     {
-        return _TestData.Contains(userInput);
+        return _testData.Contains(userInput);
     }
 
-    //Voegt Letter/Input toe aan _Text
+    //Voegt Letter/Input toe aan _text
     public void AddText(char letter)
     {
-        _RedoChars.Clear();
-        _Text.Add(letter);
+        _redoList.Clear();
+        _text.Add(letter);
     }
 
-    //verwijdert Text en checket of dit niet buiten _Text List is.
+    //verwijdert Text en checket of dit niet buiten _text List is.
     public void RemoveText()
     {
-        if (_Text.Count > 0)
+        if (_text.Count > 0)
         {
-            _Text.RemoveAt(_Text.Count - 1);
+            _text.RemoveAt(_text.Count - 1);
         }
     }
 
-    //Verwijdert de Console Prints & Print de Text List.
+    //Verwijdert de Console Prints & Print de Text List(updatet de WriteLine wanneer er iets gebeurd).
     public void PrintText()
     {
         Console.Clear();
-        Console.WriteLine(new string(_Text.ToArray()));
+        Console.WriteLine(new string(_text.ToArray()));
     }
 
     //verwijdert alle whitespace of een word per keer dat Undo wordt aangeroepen op basis van laatste char.
     public void Undo()
     {
-        int textNumber = _Text.Count-1;
+        int textNumber = _text.Count-1;
+        if (_text.Count == 0) return; // stopt Undo als het buiten bounds is.
         
         // wordt gebruikt om te zien of Undo Methode het hele woord moet verwijderen of alleen de whitespace (' ') char('s).
-        bool removeAllBlanks = _Text[textNumber] == ' ';
-        bool removeWord = _TestData.Contains(_Text[textNumber]);  //in range 'a'-'z'
+        bool removeAllBlanks = _text[textNumber] == ' ';
+        bool removeWord = _testData.Contains(_text[textNumber]);  //in range 'a'-'z'
         
             while (true) 
             {
+                if (textNumber == -1) break; // stopt de loop als het buiten bounds is.
+                
                 //verwijderd alle opeenvolgende ' ' als de laatste char ' ' is
-                if (_Text[textNumber] != ' ' && removeAllBlanks) break;
+                if (_text[textNumber] != ' ' && removeAllBlanks) break;
 
                 //stopt de loop als het een woord moet removen en de char geen letter is in range 'a'-'z'
-                if (!_TestData.Contains(_Text[textNumber]) && removeWord) break;
+                if (!_testData.Contains(_text[textNumber]) && removeWord) break;
                 
-                _RedoChars.Add(_Text[textNumber]);
-                _Text.RemoveAt(textNumber);
+                _redoList.Add(_text[textNumber]);
+                _text.RemoveAt(textNumber);
                 textNumber--;
                 
-                if (textNumber == -1) break; // stopt de loop als het buiten bounds is.
             }
     }
     
@@ -109,11 +115,10 @@ public class Opdracht17_3
     {
         while (true)
         {
-            if (_RedoChars.Count == 0) break;
-            //_RedoChars-1 omdat het anders omgekeerd toevoegd ex. abc > cba
-            _Text.Add(_RedoChars[_RedoChars.Count-1]);
-            _RedoChars.RemoveAt(_RedoChars.Count-1);
-            
+            if (_redoList.Count == 0) break;
+            //_redoList-1 omdat het anders omgekeerd letters toevoegd aan _text ex. abc > cba
+            _text.Add(_redoList[_redoList.Count-1]);
+            _redoList.RemoveAt(_redoList.Count-1);
         }
     }
 }
