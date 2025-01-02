@@ -5,12 +5,12 @@ public class Opdracht1
     public static void Run(double userInputNumber)
     {
         //print het resultaat van de convertNumberToGradeSwitch
-        System.Console.WriteLine(convertNumberToGradeSwitch(userInputNumber));
+        System.Console.WriteLine(ConvertNumberToGradeSwitch(userInputNumber));
     }
    
    
     // converteert de ingevulde nummer naar slecht, matig, voldoende, goed of uitstekend.
-    static String convertNumberToGradeSwitch(Double userInputNumber)
+    static String ConvertNumberToGradeSwitch(Double userInputNumber)
     {
         switch (userInputNumber)
         {

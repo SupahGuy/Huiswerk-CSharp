@@ -11,7 +11,6 @@ public class Opdracht11
     {
         try
         {
-            
         Console.WriteLine("\nHoofdmenu");
         Console.WriteLine("............................");
         Console.WriteLine("Toets 1 t/m 10 in om naar die opdracht te gaan.");
@@ -19,7 +18,16 @@ public class Opdracht11
         int inputGebruiker = Convert.ToInt32(Console.ReadLine());
         
         //Runt opdracht 1 als gebruiker 1 input
-        
+
+        switch (inputGebruiker)
+        {
+            case 1:
+                Console.WriteLine("Deze opdracht heeft een cijfer nodig van 1 t/m 10. (decimalen kan)");
+                double i = Convert.ToDouble(Console.ReadLine());
+                Opdracht1.Run(i);
+                terugNaarHoofdmenu();
+                break;
+        }
         if (inputGebruiker == 1)
         {
             Console.WriteLine("Deze opdracht heeft een cijfer nodig van 1 t/m 10. (decimalen kan)");
@@ -89,7 +97,7 @@ public class Opdracht11
     static void terugNaarHoofdmenu()
     {
         Console.WriteLine("\nToets een knop in om terug te gaan naar het hoofdmenu....");
-        Console.ReadKey();
+        Console.ReadKey(true);
         Hoofdmenu();
     }
 

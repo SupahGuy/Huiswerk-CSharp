@@ -13,9 +13,7 @@ public class Opdracht10
         totaalScore = 0;
         Array.Clear(vraagNrResultaat, 0, vraagNrResultaat.Length);  
         
-        
         Console.WriteLine("Welcome to the Great QUiZZ!");
-        
         
         //antwoord hoort 21 te zijn
         maakVraag("Wat is 9+10?", "910", "21", "19", "b");
@@ -34,9 +32,7 @@ public class Opdracht10
         Console.WriteLine("Jouw score is: " + totaalScore);
         Console.WriteLine(string.Join("\n", vraagNrResultaat));
         Console.WriteLine("Gefelicteerd!");
-        
     }
-
     
     static void maakVraag(string vraag, string antwoordA, string antwoordB, string antwoordC, string correcteAntwoord)
     {
@@ -44,29 +40,25 @@ public class Opdracht10
         
         Console.WriteLine($"Vraag {vraagNr}: " + vraag);
         
-        Console.WriteLine("Antwoord A. " + antwoordA);
-        Console.WriteLine("Antwoord B. " + antwoordB);
-        Console.WriteLine("Antwoord C. " + antwoordC);
-        Console.WriteLine("voer A,B, of C in.");
+        Console.WriteLine("Antwoord a. " + antwoordA);
+        Console.WriteLine("Antwoord b. " + antwoordB);
+        Console.WriteLine("Antwoord c. " + antwoordC);
+        Console.WriteLine("voer a, b of c in.");
         
         //voorkomt dat A en a niet hetzelfde is. 
         correcteAntwoord = correcteAntwoord.ToLower(); 
         
         //vraagt om antwoord veranderd A, B of C naar a, b of c.
         string userInput = Console.ReadLine().ToLower();
-
         
         if (correcteAntwoord == userInput)
         {
-            System.Console.WriteLine("Jouw antwoord is goed!");
             totaalScore++;
             vraagNrResultaat[vraagNr - 1] = ("Vraag " + vraagNr +": Goed"); // voegt Goed toe als antwoord correct is.
         }
         else
         {
             vraagNrResultaat[vraagNr - 1] = ("Vraag " + vraagNr +": Fout");
-            System.Console.WriteLine("Jouw antwoord is fout!");
         }
     }
-
 }

@@ -1,6 +1,6 @@
 ﻿namespace Learning;
 
-public class Opdracht13en14
+public class Opdracht13
 {
 
     public static void Run()

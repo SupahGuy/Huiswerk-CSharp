@@ -31,7 +31,7 @@ public class Opdracht17_6
             {
                 System.Console.WriteLine("Wilt u deze code gebruiken? 1=ja, 2=nee");
                 int inputCodeGebruiken = Convert.ToInt32(Console.ReadLine());
-
+                
                 if (inputCodeGebruiken == 1) GebruikCode(userCode);
             }
         }
@@ -53,7 +53,7 @@ public class Opdracht17_6
             }
         }
         
-        //Is de code al gebruikt?
+        //Is de code al gebruikt
         foreach (string gebruikteCode in _gebruikteCodes)
         {
             if (userInputCode == gebruikteCode)

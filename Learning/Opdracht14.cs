@@ -2,7 +2,7 @@
 
 namespace Learning;
 
-public class Opdracht15
+public class Opdracht14
 {
     //Dictionary voor Memoization Algoritme.
     private static Dictionary<long, long> memoizationNummers;
@@ -14,6 +14,7 @@ public class Opdracht15
         Console.WriteLine("1 = Iteratief");
         Console.WriteLine("2 = Recursief");
         Console.WriteLine("3 = Memoization Recursief");
+        Console.WriteLine("4 = Tabulatie Iteratief :(");
         
         int methodeFibonacci = Convert.ToInt32(Console.ReadLine());
         
@@ -25,7 +26,7 @@ public class Opdracht15
             //iteratief
             case 1:
                     FibonacciIteratief(inputGebruiker);
-                break;
+                    break;
             
             //recursief
             case 2:
@@ -44,11 +45,15 @@ public class Opdracht15
                 }
                 break;
             
+            //Tabulatie :(
+            case 4:
+                    FibonacciTabulation(inputGebruiker);
+                break;
+            
             //bij onverwachte input
             default:
                 Console.WriteLine("Error.");
                 break;
-            
         }
     }
 
@@ -62,7 +67,7 @@ public class Opdracht15
         
         for (int i = 0; aantalIteraties > i; i++)
         {
-            number1 += number2;
+            number1 = number1 + number2;
             (number1, number2) = (number2, number1); // switchet number1 naar number2 en vice versa
             
             System.Console.WriteLine(number1);
@@ -102,5 +107,30 @@ public class Opdracht15
         //voegt niet geïndexeerde nummers toe aan de Dictionary memoizationNummers.
         memoizationNummers[i] = nummer;
         return nummer;
+    }
+    
+    //dit is dom.
+    public static void FibonacciTabulation(int aantalIteraties)
+    {
+        
+        //start nummers
+        long number1 = 1;
+        long number2 = 0;
+        List<long> tabulationIsStupid = new List<long>();
+        
+        for (int i = -1; aantalIteraties > i; i++)
+        {
+            number1 = number1 + number2;
+            (number1, number2) = (number2, number1); // switchet number1 naar number2 en vice versa
+            
+            tabulationIsStupid.Add(number1);
+        }
+
+        int indexList = -1;
+        foreach (long fibbonacciNumber in tabulationIsStupid)
+        {
+            indexList++;
+            Console.WriteLine($"Number: {fibbonacciNumber} Index: [{indexList}]");
+        } 
     }
 }

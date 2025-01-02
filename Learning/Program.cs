@@ -6,6 +6,7 @@ namespace Learning
     {
         static void Main(string[] args)
         {
+            
             //Opdracht1.Run(6.9); // Cijfer naar voldoende, onvoldoende enz.. Switch variant
             //Opdracht2.Run(6.9); // Cijfer naar voldoende, onvoldoende enz.. If-Statement variant
             //Opdracht3.Run(); // Hoger of Lager spel
@@ -18,8 +19,8 @@ namespace Learning
             //Opdracht10.Run(); // Quiz met totaal score aan het einde.
             //Opdracht11.Run(); // Hoofdmenu om andere opdrachten te runnen.
             //Calculator.RunCalculator(); // Run de Calculator app van Opdracht 16
-            //Opdracht13en14.Run(); //FizzBuzzBang leuke opdracht
-            //Opdracht15.Run(); // Fibonacci op verschillende manieren, eerste gebruik van Recursieve Algoritmes en Memoization.
+            //Opdracht13.Run(); //FizzBuzzBang leuke opdracht
+            // Opdracht14.Run(); // Fibonacci op verschillende manieren, eerste gebruik van Recursieve Algoritmes en Memoization.
             
             
             //Opdracht 17-1
@@ -43,11 +44,24 @@ namespace Learning
             // o17_5.Run();
 
             //Opdracht 17_6
-            Opdracht17_6 o17_6 = new Opdracht17_6();
-            o17_6.Run();
-
+            // Opdracht17_6 o17_6 = new Opdracht17_6();
+            // o17_6.Run();
+            
+            //Opdracht 17_7
+            // Opdracht17_7 o17_7 = new Opdracht17_7();
+            // o17_7.Run();
+            
+            //Opdracht 17_8
+            Opdracht17_8 o17_8 = new Opdracht17_8();
+            o17_8.Run();
+            
 
             // BoterKaasEieren.Run();
+
+            // Opdracht18_1 o18 = new Opdracht18_1();
+            // o18.Run();
+
+
         }
 
     }
