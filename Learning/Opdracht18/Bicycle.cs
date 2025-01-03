@@ -3,10 +3,9 @@ public class Bicycle
 {
     public enum Sloten
     {
-        None, // 0
-        Sleutel, // 1
-        WielSlot, // 2
-        DubbeleSlot, // 3
+        Sleutel, // 0
+        WielSlot, // 1
+        DubbeleSlot, // 2
     }
     public enum Kleuren
     {
@@ -19,26 +18,48 @@ public class Bicycle
         Black = 5,
         Orange = 6,
     }
-    
+
+    public enum FietsTypes
+    {
+        Standaard,
+        Elektrisch
+        
+    }
+
     private int _FrameHoogteCm;
-    public Sloten Slot { get; set; }
-    public Kleuren Kleur { get; set; }
+    private Sloten _Slot { get; set; }
+    private Kleuren _Kleur { get; set; }
+    private Boolean _Locked { get; set; }
+    private FietsTypes FietsType { get; set; }
 
     public Bicycle(Sloten slot, Kleuren kleur, int frameHoogteCm)
     {
-        this.Slot = slot;
-        this.Kleur = kleur;
+        this._Slot = slot;
+        this._Kleur = kleur;
         _FrameHoogteCm = frameHoogteCm;
+        _Locked = false;
     }
 
+    //return
     public override string ToString()
     {
-        return $"Slot: {Slot}\nKleur: {kleur}\nFramehoogte(cm): {_FrameHoogteCm}";
+        if (_Locked)
+        {
+            return $"Slot: {_Slot}\nKleur: {_Kleur}\nFramehoogte(cm): {_FrameHoogteCm}\nSlot Status: Locked\n";
+        }
+        return $"Slot: {_Slot}\nKleur: {_Kleur}\nFramehoogte(cm): {_FrameHoogteCm}\nSlot Status: Unlocked\n";
     }
 
-
-    public void PrintVariables()
+    //Sluit de vergrendeling als deze ontgrendeld is.
+    public void Lock()
     {
-        ToString();
+        if (!_Locked) _Locked = true;
+
+    }
+
+    //Ontgrendeld de vergrendeling als deze vergendeld is.
+    public void Unlock()
+    {
+        if (_Locked) _Locked = false;
     }
 }

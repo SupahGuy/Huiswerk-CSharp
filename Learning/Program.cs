@@ -55,13 +55,24 @@ namespace Learning
             // Opdracht17_8 o17_8 = new Opdracht17_8();
             // o17_8.Run();
             
-
-            // BoterKaasEieren.Run();
-
             //Opdracht 18_1
-            Bicycle o18 = new Bicycle(Bicycle.Sloten.WielSlot, Bicycle.Kleuren.Black, 13);
-            Console.WriteLine(o18.ToString());
-            // o18.Run();
+            
+            // Bicycle bicycle1 = new Bicycle(Bicycle.Sloten.WielSlot, Bicycle.Kleuren.Black, 13);
+            // Console.WriteLine(bicycle1.ToString());
+            // bicycle1.Lock();
+            // Console.WriteLine(bicycle1.ToString());
+            // bicycle1.Unlock();
+            // Console.WriteLine(bicycle1.ToString());
+            //
+            // Bicycle bicycle2 = new Bicycle(Bicycle.Sloten.Sleutel, Bicycle.Kleuren.NeonBlue, 53);
+            // bicycle2.Unlock();
+            // Console.WriteLine(bicycle2.ToString());
+            //
+            // Bicycle bicycle3 = new Bicycle(Bicycle.Sloten.DubbeleSlot, Bicycle.Kleuren.Camel, 3);
+            // bicycle3.Lock();
+            // Console.WriteLine(bicycle3.ToString());
+            
+            //Opdracht 18-2
 
 
         }
