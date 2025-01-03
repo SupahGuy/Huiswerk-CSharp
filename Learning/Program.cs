@@ -52,13 +52,15 @@ namespace Learning
             // o17_7.Run();
             
             //Opdracht 17_8
-            Opdracht17_8 o17_8 = new Opdracht17_8();
-            o17_8.Run();
+            // Opdracht17_8 o17_8 = new Opdracht17_8();
+            // o17_8.Run();
             
 
             // BoterKaasEieren.Run();
 
-            // Opdracht18_1 o18 = new Opdracht18_1();
+            //Opdracht 18_1
+            Bicycle o18 = new Bicycle(Bicycle.Sloten.WielSlot, Bicycle.Kleuren.Black, 13);
+            Console.WriteLine(o18.ToString());
             // o18.Run();
 
 
