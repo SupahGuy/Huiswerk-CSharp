@@ -55,24 +55,50 @@ namespace Learning
             // Opdracht17_8 o17_8 = new Opdracht17_8();
             // o17_8.Run();
             
-            //Opdracht 18_1
+            //Opdracht 18_1 en 18_2
             
-            // Bicycle bicycle1 = new Bicycle(Bicycle.Sloten.WielSlot, Bicycle.Kleuren.Black, 13);
+            // Bicycle bicycle1 = new Bicycle(Bicycle.Sloten.WielSlot, Bicycle.Kleuren.Black, 13, Bicycle.FietsTypes.Elektrisch);
             // Console.WriteLine(bicycle1.ToString());
+            // bicycle1.RangeInKm(10.5);
             // bicycle1.Lock();
             // Console.WriteLine(bicycle1.ToString());
             // bicycle1.Unlock();
             // Console.WriteLine(bicycle1.ToString());
             //
-            // Bicycle bicycle2 = new Bicycle(Bicycle.Sloten.Sleutel, Bicycle.Kleuren.NeonBlue, 53);
+            // Bicycle bicycle2 = new Bicycle(Bicycle.Sloten.Sleutel, Bicycle.Kleuren.NeonBlue, 53, Bicycle.FietsTypes.Standaard);
             // bicycle2.Unlock();
+            // bicycle2.RangeInMiles(25);
             // Console.WriteLine(bicycle2.ToString());
             //
-            // Bicycle bicycle3 = new Bicycle(Bicycle.Sloten.DubbeleSlot, Bicycle.Kleuren.Camel, 3);
+            // Bicycle bicycle3 = new Bicycle(Bicycle.Sloten.DubbeleSlot, Bicycle.Kleuren.Camel, 3, Bicycle.FietsTypes.Elektrisch);
+            // Console.WriteLine(bicycle3.ToString());
             // bicycle3.Lock();
+            // bicycle3.RangeInMiles(15000);
             // Console.WriteLine(bicycle3.ToString());
             
-            //Opdracht 18-2
+            //Opdracht 18_3
+            // Console.WriteLine(Calculator.Sub(3, -3.5));
+            // Console.WriteLine(Calculator.Add(10.8, 15.2));
+            
+            //Opdracht18_4
+            // Person p1 = new Person();
+            // Console.WriteLine(p1.ToString());
+            //
+            // Person p2 = new Person();
+            // Person p3 = new Person();
+            //
+            // Console.WriteLine(p2.ToString());
+            // Console.WriteLine(p3.ToString());
+            // Console.WriteLine(p2.ToString());
+            
+            //Opdracht18_5
+            Console.WriteLine(
+                "applicatie naam:" +
+                ConfigurationData.Get_applicatieNaam() +
+                    "\nversie:" +
+            ConfigurationData.Get_versie() +
+                    "\nmax gebruikers:" +
+            ConfigurationData.Get_maxAantalGebruikers());
 
 
         }

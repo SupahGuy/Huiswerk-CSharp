@@ -23,43 +23,53 @@ public class Bicycle
     {
         Standaard,
         Elektrisch
-        
     }
+    
+    private int _frameHoogteCm;
+    private Sloten _slot { get; set; }
+    private Kleuren _kleur { get; set; }
+    private string _locked { get; set; }
+    private FietsTypes _fietsType { get; set; }
+    private double _rangeInKm { get; set; }
 
-    private int _FrameHoogteCm;
-    private Sloten _Slot { get; set; }
-    private Kleuren _Kleur { get; set; }
-    private Boolean _Locked { get; set; }
-    private FietsTypes FietsType { get; set; }
-
-    public Bicycle(Sloten slot, Kleuren kleur, int frameHoogteCm)
+    
+    public Bicycle(Sloten slot, Kleuren kleur, int frameHoogteCm, FietsTypes fietsType)
     {
-        this._Slot = slot;
-        this._Kleur = kleur;
-        _FrameHoogteCm = frameHoogteCm;
-        _Locked = false;
+        this._slot = slot;
+        this._kleur = kleur;
+        _frameHoogteCm = frameHoogteCm;
+        _locked = "Unlocked";
+        _fietsType = fietsType;
+        _rangeInKm = -1; // -1 = unset.
     }
 
-    //return
+    //De output van de Bicycle klasse
     public override string ToString()
     {
-        if (_Locked)
-        {
-            return $"Slot: {_Slot}\nKleur: {_Kleur}\nFramehoogte(cm): {_FrameHoogteCm}\nSlot Status: Locked\n";
-        }
-        return $"Slot: {_Slot}\nKleur: {_Kleur}\nFramehoogte(cm): {_FrameHoogteCm}\nSlot Status: Unlocked\n";
+        return $"Slot: {_slot}\nKleur: {_kleur}\nFramehoogte(cm): {_frameHoogteCm}\nSlot Status: {_locked}\nFietstype: {_fietsType}\nKm: {_rangeInKm}\n";
     }
 
     //Sluit de vergrendeling als deze ontgrendeld is.
     public void Lock()
     {
-        if (!_Locked) _Locked = true;
+        if (_locked.Equals("Unlocked")) _locked = "Locked" ;
 
     }
 
     //Ontgrendeld de vergrendeling als deze vergendeld is.
     public void Unlock()
     {
-        if (_Locked) _Locked = false;
+        if (_locked.Equals("Locked")) _locked = "Unlocked";
+    }
+
+    public void RangeInKm(double rangeKm)
+    {
+        _rangeInKm = rangeKm;
+    }
+    
+    //Veranderd rangeMiles naar km zodat het in _rangeInKm gedaan kan worden om uitgeprint te worden.
+    public void RangeInMiles(double rangeMiles)
+    {
+        _rangeInKm = (1/0.621371192)*rangeMiles;
     }
 }
