@@ -2,11 +2,6 @@
 
 public class Calculator
 {
-    public Calculator()
-    {
-        
-    }
-
     public static double Add(double a, double b)
     {
         return (a + b);

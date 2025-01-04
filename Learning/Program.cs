@@ -1,4 +1,5 @@
 ﻿using System;
+using Learning.Opdracht19;
 
 namespace Learning
 {
@@ -6,21 +7,25 @@ namespace Learning
     {
         static void Main(string[] args)
         {
+            // gebruik ctrl+/ om dit uit de comment te halen zo kan je makkelijk alles runnen.
             
-            //Opdracht1.Run(6.9); // Cijfer naar voldoende, onvoldoende enz.. Switch variant
-            //Opdracht2.Run(6.9); // Cijfer naar voldoende, onvoldoende enz.. If-Statement variant
-            //Opdracht3.Run(); // Hoger of Lager spel
-            //Opdracht4.Run(); // Do...While Loop  1 t/m 10
-            //Opdracht5.Run(); // FizzBuzz For Loop 3,5
-            //Opdracht6.Run(); // Foreach print namen <= 5 tekens.
-            //Opdracht7.Run(); // Priemgetallen 10 break loop
-            //Opdracht8.Run(); // continue wanneer i deelbaar is door 3
-            //Opdracht9.Run(69); // invoer getal 1-100(natuurlijke getallen) print naar voldoende, onvoldoende enz.. // Short-if variant
-            //Opdracht10.Run(); // Quiz met totaal score aan het einde.
-            //Opdracht11.Run(); // Hoofdmenu om andere opdrachten te runnen.
-            //Calculator.RunCalculator(); // Run de Calculator app van Opdracht 16
+            // Opdracht1.Run(6.9); // Cijfer naar voldoende, onvoldoende enz.. Switch variant
+            // Opdracht2.Run(6.9); // Cijfer naar voldoende, onvoldoende enz.. If-Statement variant
+            // Opdracht3.Run(); // Hoger of Lager spel
+            // Opdracht4.Run(); // Do...While Loop  1 t/m 10
+            // Opdracht5.Run(); // FizzBuzz For Loop 3,5
+            // Opdracht6.Run(); // Foreach print namen <= 5 tekens.
+            // Opdracht7.Run(); // Priemgetallen 10 break loop
+            // Opdracht8.Run(); // continue wanneer i deelbaar is door 3
+            // Opdracht9.Run(69); // invoer getal 1-100(natuurlijke getallen) print naar voldoende, onvoldoende enz.. // Short-if variant
+            // Opdracht10.Run(); // Quiz met totaal score aan het einde.
+            // Opdracht11.Run(); // Hoofdmenu om andere opdracht 1-10 te runnen.
+            
+            //Calculator.RunCalculator(); // Run de CleanCode Calculator app van Opdracht 16
+            
             //Opdracht13.Run(); //FizzBuzzBang leuke opdracht
-            // Opdracht14.Run(); // Fibonacci op verschillende manieren, eerste gebruik van Recursieve Algoritmes en Memoization.
+            
+            //Opdracht14.Run(); // Fibonacci op verschillende manieren, eerste gebruik van Recursieve Algoritmes(cool maar lastig, heb zelf alles moeten onderzoeken) en Memoization.
             
             
             //Opdracht 17-1
@@ -92,13 +97,43 @@ namespace Learning
             // Console.WriteLine(p2.ToString());
             
             //Opdracht18_5
-            Console.WriteLine(
-                "applicatie naam:" +
-                ConfigurationData.Get_applicatieNaam() +
-                    "\nversie:" +
-            ConfigurationData.Get_versie() +
-                    "\nmax gebruikers:" +
-            ConfigurationData.Get_maxAantalGebruikers());
+            // Console.WriteLine(
+            //     "applicatie naam:" +
+            //     ConfigurationData.Get_applicatieNaam() +
+            //         "\nversie:" +
+            // ConfigurationData.Get_versie() +
+            //         "\nmax gebruikers:" +
+            // ConfigurationData.Get_maxAantalGebruikers());
+
+            //Opdracht 19_1
+            // Car c1 = new Car(Car.Brand.Hyundai, Car.TypeCar.Minitruck, Car.Color.Red, 2000, 12419424120);
+            // c1.DisplayInfo();
+            // Car c2 = new Car(Car.Brand.Lamborghini, Car.TypeCar.Minitruck, Car.Color.Green, 2077, 0000000000001);
+            // c2.DisplayInfo();
+            
+            //Opdracht 19_2
+            // Garage g1 = new Garage();
+            // g1.AddCar(Car.Brand.Hyundai, Car.TypeCar.Minitruck, Car.Color.Red, 2000, 12419424120);
+            // g1.DisplayInfo();
+            //
+            // g1.AddCar(Car.Brand.Lamborghini, Car.TypeCar.Minitruck, Car.Color.Green, 2077, 0000000000001);
+            //
+            // g1.AddCar(Car.Brand.BMW, Car.TypeCar.SUV, Car.Color.Black, 2020, 931049104285);
+            //
+            // g1.DisplayInfo();
+            
+            //Opdracht 19_3
+            WPark w1 = new WPark();
+            w1.AddGarage("WparkGarage1");
+            w1.AddGarage("WparkGarage2");
+            w1.AddCar("WparkGarage1", Car.TypeCar.Hatchback, Car.Brand.Lamborghini, Car.Color.Black, 2000, 190149104202);
+            w1.AddCar("WparkGarage2", Car.TypeCar.SUV, Car.Brand.BMW, Car.Color.Blue, 1930, 0000000000000000);
+            w1.AddCar("WparkGarage2", Car.TypeCar.Minitruck, Car.Brand.Hyundai, Car.Color.Red, 2025, 928561946201);
+            w1.AddGarage("WparkBackupGarage");
+            w1.DisplayList();
+            
+            
+            
 
 
         }
