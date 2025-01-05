@@ -4,7 +4,7 @@ using Learning.Opdracht19;
 namespace Learning
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
             // gebruik ctrl+/ om dit uit de comment te halen zo kan je makkelijk alles runnen.
@@ -123,20 +123,60 @@ namespace Learning
             // g1.DisplayInfo();
             
             //Opdracht 19_3
-            WPark w1 = new WPark();
-            w1.AddGarage("WparkGarage1");
-            w1.AddGarage("WparkGarage2");
-            w1.AddCar("WparkGarage1", Car.TypeCar.Hatchback, Car.Brand.Lamborghini, Car.Color.Black, 2000, 190149104202);
-            w1.AddCar("WparkGarage2", Car.TypeCar.SUV, Car.Brand.BMW, Car.Color.Blue, 1930, 0000000000000000);
-            w1.AddCar("WparkGarage2", Car.TypeCar.Minitruck, Car.Brand.Hyundai, Car.Color.Red, 2025, 928561946201);
-            w1.AddGarage("WparkBackupGarage");
-            w1.DisplayList();
+            // WPark w1 = new WPark();
+            // w1.AddGarage("WparkGarage1");
+            // w1.AddGarage("WparkGarage2");
+            // w1.AddCar("WparkGarage1", Car.TypeCar.Hatchback, Car.Brand.Lamborghini, Car.Color.Black, 2000, 190149104202);
+            // w1.AddCar("WparkGarage2", Car.TypeCar.SUV, Car.Brand.BMW, Car.Color.Blue, 1930, 0000000000000000);
+            // w1.AddCar("WparkGarage2", Car.TypeCar.Minitruck, Car.Brand.Hyundai, Car.Color.Red, 2025, 928561946201);
+            // w1.AddGarage("WparkBackupGarage");
+            // w1.DisplayList();
             
             
+            //Opdracht 16 (Digischool)
+            // var users = new List<Opdracht16__digischool_.User>
+            // {
+            //     new Opdracht16__digischool_.Teacher("Mr. Crack", 1001, 101, 20),
+            //     new Opdracht16__digischool_.Student("Joél Gravendörf", 2001, 301, 2),
+            //     new Opdracht16__digischool_.Student("Jesus", 2002, 302, 3)
+            // };
+            //
+            // var materials = new List<Opdracht16__digischool_.Material>
+            // {
+            //     new Opdracht16__digischool_.Book("Book", "A hitchhikers guide of the galaxy", "Hitchhiking across the galaxy", "Sci-Fi", "Peter Pannekoek"),
+            //     new Opdracht16__digischool_.DigitalDocument("DigitalDocument", "SOAD album", "Mesmerize", "mp3", 120),
+            //     new Opdracht16__digischool_.Video("Video", "C# Tutorial", "Comprehensive C# video guide", 7200, true)
+            // };
+            //
+            // var courses = new List<Opdracht16__digischool_.Course>
+            // {
+            //     new Opdracht16__digischool_.Course(1, "C# ", "deze vak"),
+            //     new Opdracht16__digischool_.Course(2, "Operations", "Dit is operations met devops enzo")
+            // };
+            //
+            // // Display data
+            // Console.WriteLine("\nUsers:");
+            // foreach (var user in users)
+            // {
+            //     Console.WriteLine("\n" +user);
+            // }
+            //
+            // Console.WriteLine("\nMaterials:");
+            // foreach (var material in materials)
+            // {
+            //     Console.WriteLine("\n" +material);
+            // }
+            //
+            // Console.WriteLine("\nCourses:");
+            // foreach (var course in courses)
+            // {
+            //     Console.WriteLine("\n" + course);
+            // }
             
+            //Opdracht 20 (zie Folder Opdracht 20.) in Program moet je main uitcommenten.
+
 
 
         }
-
     }
 }
