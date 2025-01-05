@@ -5,7 +5,8 @@ namespace Learning
 {
     class Program
     { 
-        static void Main(string[] args)
+        // static void Main(string[] args)
+        static Program()
         {
             // gebruik ctrl+/ om dit uit de comment te halen zo kan je makkelijk alles runnen.
             
