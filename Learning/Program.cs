@@ -1,12 +1,13 @@
 ﻿using System;
 using Learning.Opdracht19;
-
+using System.Diagnostics;
+using System.Threading;
 namespace Learning
 {
     class Program
     { 
-        // static void Main(string[] args)
-        static Program()
+        public async static Task Main(string[] args)
+        // static Program()
         {
             // gebruik ctrl+/ om dit uit de comment te halen zo kan je makkelijk alles runnen.
             
@@ -174,8 +175,57 @@ namespace Learning
             //     Console.WriteLine("\n" + course);
             // }
             
-            //Opdracht 20 (zie Folder Opdracht 20.) in Program moet je main uitcommenten.
-
+            //Opdracht 20+21 (zie Folder Opdracht 20+21.) in Program moet je main uitcommenten.
+            
+            //Opdracht 22
+            
+            //Zonder Async
+            // Opdracht22 o22 = new Opdracht22();
+            // Stopwatch stopWatch1 = new Stopwatch();
+            //
+            // stopWatch1.Start();
+            // o22.NewList();
+            // o22.GetDataFromCsv();
+            //
+            // o22.NewList();
+            // o22.GetDataFromCsv();
+            //
+            // o22.NewList();
+            // o22.GetDataFromCsv();
+            //
+            // o22.NewList();
+            // o22.GetDataFromCsv();
+            //
+            // o22.NewList();
+            // o22.GetDataFromCsv();
+            //
+            // o22.CalculateCount();
+            //
+            // stopWatch1.Stop();
+            // TimeSpan ts1 = stopWatch1.Elapsed;
+            //
+            // Console.WriteLine("Time zonder async:" + ts1);
+            //
+            // //met async
+            //
+            // Opdracht22Async o22async = new Opdracht22Async();
+            // Stopwatch stopWatch2 = new Stopwatch();
+            //
+            // stopWatch2.Start();
+            //
+            // o22async.GetSumOfAllFiles(5);
+            // o22async.CalculateCount();
+            //
+            // stopWatch2.Stop();
+            // TimeSpan ts2 = stopWatch2.Elapsed;
+            //
+            // Console.WriteLine("Time met async:" + ts2);
+            //
+            // //gemideld is de tijd met async ongeveer 2x sneller met mijn code.
+            // //het gebruikt nu alleen async om alle variablen in een list<string> te zetten.
+            // //ik zie nu dat ik ook gewoon gelijk van de reader naar een nummer kan veranderen en dan dat bij elkaar optellen maar nu is het dezelfde code maar sneller.
+            // //het doet dit door meerdere instances van een bepaalde methode of "task" te doen tegelijkertijd.
+            // //ik begrijp nu de basis van Async en Await. 
 
 
         }

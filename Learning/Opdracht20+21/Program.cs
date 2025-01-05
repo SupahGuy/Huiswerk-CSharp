@@ -4,8 +4,8 @@ namespace FlorisVx
 {
     class Program
     {
-        static void Main(string[] args)  // om de programma te laten werken Remove je de comment op deze line en verwijder je de volgende lijn
-        // static Program() //(remove deze line)
+        // static void Main(string[] args)  // om de programma te laten werken Remove je de comment op deze line en verwijder je de volgende lijn
+        static Program() //(remove deze line)
         {
             List<Vehicle> vehicleList = new List<Vehicle>();
             //ik neem aan dat dit motorfietsen zijn. dus ook engines hebben.
@@ -68,6 +68,7 @@ namespace FlorisVx
                     vehicle.StartEngine();
                     vehicle.Drive();
                     vehicle.StopEngine();
+
                 }
                 
                 if (vehicle is CargoPlane)
@@ -94,6 +95,7 @@ namespace FlorisVx
                     vehicle.LoadCargo();
                     vehicle.StopEngine();
                 }
+                Console.WriteLine(""); // spacing tussen elke vehicle dat geprint wordt.
             }
         }
     }
