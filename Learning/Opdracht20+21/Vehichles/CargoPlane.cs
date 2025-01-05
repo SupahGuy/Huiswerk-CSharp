@@ -9,27 +9,27 @@ public class CargoPlane : Vehicle, IDriveable, IHasEngine, IFlyable, ICargo
         Year = year;
     }
 
-    public void StartEngine()
+    public override void StartEngine()
     {
         Console.WriteLine($"{ColorVehicle} Cargo Plane engine started");
     }
 
-    public void StopEngine()
+    public override void StopEngine()
     {
         Console.WriteLine($"{ColorVehicle} Cargo Plane engine stopped");
     }
 
-    public void Drive()
+    public override void Drive()
     {
         Console.WriteLine($"Driving a {ColorVehicle} Cargo Plane on the ground");
     }
 
-    public void LoadCargo()
+    public override void LoadCargo()
     {
         Console.WriteLine($"Loading cargo in {ColorVehicle} plane");
     }
 
-    public void Fly()
+    public override void Fly()
     {
         Console.WriteLine($"Flying a {ColorVehicle} cargo Plane");
     }

@@ -9,22 +9,22 @@ public class Plane : Vehicle, IDriveable, IHasEngine, IFlyable
         Year = year;
     }
 
-    public void StartEngine()
+    public override void StartEngine()
     {
         Console.WriteLine($"{ColorVehicle} Plane engine started");
     }
 
-    public void StopEngine()
+    public override void StopEngine()
     {
         Console.WriteLine($"{ColorVehicle} Plane engine stopped");
     }
 
-    public void Drive()
+    public override void Drive()
     {
         Console.WriteLine($"Driving a {ColorVehicle} on the ground");
     }
 
-    public void Fly()
+    public override void Fly()
     {
         Console.WriteLine($"Flying a {ColorVehicle} Plane");
     }

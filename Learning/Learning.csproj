@@ -14,8 +14,8 @@
     <ItemGroup>
       <Content Include="Opdracht12\NotSoCleanCode\NotSoCleanCode.csproj" />
       <Content Include="Opdracht12\NotSoCleanCode\NotSoCleanCode.sln" />
-      <Content Include="Opdracht20\FlorisLegacyCode.csproj" />
-      <Content Include="Opdracht20\FlorisLegacyCode.sln" />
+      <Content Include="Opdracht20+21\FlorisLegacyCode.csproj" />
+      <Content Include="Opdracht20+21\FlorisLegacyCode.sln" />
     </ItemGroup>
 
 </Project>

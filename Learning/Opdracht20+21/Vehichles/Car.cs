@@ -9,17 +9,17 @@ public class Car : Vehicle, IHasEngine, IDriveable
         Year = year;
     }
 
-    public void StartEngine()
+    public override void StartEngine()
     {
         Console.WriteLine($"{ColorVehicle} Car engine started");
     }
 
-    public void StopEngine()
+    public override void StopEngine()
     {
         Console.WriteLine($"{ColorVehicle} Car engine stopped");
     }
 
-    public void Drive()
+    public override void Drive()
     {
         Console.WriteLine($"Driving a {ColorVehicle} Car");
     }

@@ -9,22 +9,22 @@ public class Truck : Vehicle, IDriveable, IHasEngine, ICargo
         Year = year;
     }
 
-    public void StartEngine()
+    public override void StartEngine()
     {
-        Console.WriteLine($"{ColorVehicle} Truck Plane engine started");
+        Console.WriteLine($"{ColorVehicle} Truck engine started");
     }
 
-    public void StopEngine()
+    public override void StopEngine()
     {
         Console.WriteLine($"{ColorVehicle} Truck engine stopped");
     }
 
-    public void Drive()
+    public override void Drive()
     {
-        Console.WriteLine($"Driving a {ColorVehicle} Truck on the ground");
+        Console.WriteLine($"Driving a {ColorVehicle} Truck");
     }
 
-    public void LoadCargo()
+    public override void LoadCargo()
     {
         Console.WriteLine($"Loading cargo in {ColorVehicle} Truck");
     }
