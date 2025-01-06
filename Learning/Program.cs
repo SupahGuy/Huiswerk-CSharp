@@ -2,6 +2,7 @@
 using Learning.Opdracht19;
 using System.Diagnostics;
 using System.Threading;
+
 namespace Learning
 {
     class Program
@@ -226,6 +227,10 @@ namespace Learning
             // //ik zie nu dat ik ook gewoon gelijk van de reader naar een nummer kan veranderen en dan dat bij elkaar optellen maar nu is het dezelfde code maar sneller.
             // //het doet dit door meerdere instances van een bepaalde methode of "task" te doen tegelijkertijd.
             // //ik begrijp nu de basis van Async en Await. 
+            
+            // opdracht 23
+            Opdracht23.Opdracht23 o23 = new Opdracht23.Opdracht23();
+            o23.DisplayAllStaffMembers();
 
 
         }
