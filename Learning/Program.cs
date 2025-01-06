@@ -7,7 +7,7 @@ namespace Learning
 {
     class Program
     { 
-        public async static Task Main(string[] args)
+        public static async Task Main(string[] args)
         // static Program()
         {
             // gebruik ctrl+/ om dit uit de comment te halen zo kan je makkelijk alles runnen.
@@ -230,7 +230,7 @@ namespace Learning
             
             // opdracht 23
             Opdracht23.Opdracht23 o23 = new Opdracht23.Opdracht23();
-            o23.DisplayAllStaffMembers();
+            await o23.DisplayAllStaffMembers();
 
 
         }

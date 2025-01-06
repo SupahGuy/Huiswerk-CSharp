@@ -27,26 +27,25 @@ public class Opdracht23
         "Hannah Harris",
         "Ian Irving"
     };
-    
-    public async void DisplayAllStaffMembers()
+   
+    //Maakt tasks om elke data op te halen a.h.v naam,  Wanneer een task klaar is print het deze uit.
+    public async Task DisplayAllStaffMembers()
     {
         List<Task<StaffMember>> tasks = new();
 
         foreach (string staffMemberName in staffMemberNames)
         {
+            // Start the tasks asynchronously
             tasks.Add(StaffMember.GetStaffMemberAsync(staffMemberName));
         }
         
-        await Task.WhenAll();
-        
-        Console.WriteLine("All staff members:");
-        
-        foreach (var task in tasks)
+        while (tasks.Count > 0)
         {
-            Console.WriteLine(task.Result.ToString());
+            var completedTask = await Task.WhenAny(tasks);
+            
+            tasks.Remove(completedTask);
+            
+            Console.WriteLine(completedTask.Result.ToString()); // print de staffmember uit.
         }
-
-
     }
-
 }
