@@ -229,8 +229,12 @@ namespace Learning
             // //ik begrijp nu de basis van Async en Await. 
             
             // opdracht 23
-            Opdracht23.Opdracht23 o23 = new Opdracht23.Opdracht23();
-            await o23.DisplayAllStaffMembers();
+            // Opdracht23.Opdracht23 o23 = new Opdracht23.Opdracht23();
+            // await o23.DisplayAllStaffMembers();
+
+            //Opdracht 26
+            BoterKaasEieren boterKaasEieren = new BoterKaasEieren();
+            boterKaasEieren.Run();
 
 
         }

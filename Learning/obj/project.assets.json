@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DaanS\\RiderProjects\\Learning\\Huiswerk-CSharp\\Learning\\Learning.csproj",
+      "projectUniqueName": "C:\\Users\\DaanS\\bureablad\\1 - ICT\\ICT\\CSharp\\Huiswerk\\Huiswerk-CSharp\\Learning\\Learning.csproj",
       "projectName": "Learning",
-      "projectPath": "C:\\Users\\DaanS\\RiderProjects\\Learning\\Huiswerk-CSharp\\Learning\\Learning.csproj",
+      "projectPath": "C:\\Users\\DaanS\\bureablad\\1 - ICT\\ICT\\CSharp\\Huiswerk\\Huiswerk-CSharp\\Learning\\Learning.csproj",
       "packagesPath": "C:\\Users\\DaanS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DaanS\\RiderProjects\\Learning\\Huiswerk-CSharp\\Learning\\obj\\",
+      "outputPath": "C:\\Users\\DaanS\\bureablad\\1 - ICT\\ICT\\CSharp\\Huiswerk\\Huiswerk-CSharp\\Learning\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DaanS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,11 +41,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -67,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

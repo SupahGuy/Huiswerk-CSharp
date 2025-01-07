@@ -35,7 +35,7 @@ public class Opdracht23
 
         foreach (string staffMemberName in staffMemberNames)
         {
-            // Start the tasks asynchronously
+            // Start the tasks (bijna) tegelijk.
             tasks.Add(StaffMember.GetStaffMemberAsync(staffMemberName));
         }
         
