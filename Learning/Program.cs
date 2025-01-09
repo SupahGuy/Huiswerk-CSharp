@@ -232,9 +232,15 @@ namespace Learning
             // Opdracht23.Opdracht23 o23 = new Opdracht23.Opdracht23();
             // await o23.DisplayAllStaffMembers();
 
+            //Opdracht 24
+            //Remi zij dat ik het kon laten.
+            
+            //Opdracht 25
+            //Remi zij dat ik het kon laten.
+            
             //Opdracht 26
-            BoterKaasEieren boterKaasEieren = new BoterKaasEieren();
-            boterKaasEieren.Run();
+            // BoterKaasEieren boterKaasEieren = new BoterKaasEieren();
+            // boterKaasEieren.Run();
 
 
         }

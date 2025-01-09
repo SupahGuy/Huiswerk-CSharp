@@ -1,5 +1,5 @@
 ﻿namespace Opdracht23;
-
+//Code smell: primitive obsession
 public class StaffMember
 {
     private string _fullName;
@@ -7,7 +7,6 @@ public class StaffMember
     private string _occupation;
     private string _sector;
     private string _date;
-    
     private static List<StaffMember> _staffMembers = new List<StaffMember>();
     
     public StaffMember(string fullname, int hours, string occupation, string sector, string date)
@@ -17,12 +16,9 @@ public class StaffMember
         _occupation = occupation;
         _sector = sector;
         _date = date;
-        
         _staffMembers.Add(this);
     }
     
-
-
     public static async Task<StaffMember> GetStaffMemberAsync(string fullName)
     {
         

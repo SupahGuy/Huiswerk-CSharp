@@ -1,5 +1,5 @@
 ﻿namespace Learning;
-
+//Code smells: Long Class, sommige functionaliteit kon in een klasses zoals CheckIfWon of CheckIfTie.
 public class BoterKaasEieren
 {
     private Dictionary<int, string> _boardstate;
@@ -19,10 +19,10 @@ public class BoterKaasEieren
     public void Run()
     {
         CreateBoard();
-
+        //All the logic for running the game.
         while (true)
         {
-            //clears the board if theres a winning position.
+            //clears the board if there's a winning position.
 
             DisplayBoardState();
 
@@ -57,7 +57,7 @@ public class BoterKaasEieren
                 EndBoardState("Tie");
                 continue;
             }
-
+            
         }
     }
 
